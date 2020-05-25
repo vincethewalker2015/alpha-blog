@@ -1,0 +1,31 @@
+<h1>All Articles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+   <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td> <br />
+      <td><%= article.description %></td><br />
+      <td>
+        <%= link_to "Show", articles_path(@article) %>
+        <%= link_to "Edit", "#" %>
+        <%= link_to "Destroy","#" %>
+      </td><br />
+    </tr>
+     <% end %>
+  </tbody>
+</table>
+
+
+
+
+
+
