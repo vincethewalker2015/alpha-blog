@@ -1,3 +1,9 @@
 <h1>Articles Listing Page</h1>
 <p><strong>Title: <%= @article.title %></strong></p>
 <p>Description: <%= @article.description %></p>
+<p>
+  <%= link_to "Home Page", root_path %> |
+  <%= link_to "All Articles", articles_path %> |
+  <%= link_to "Edit Article", edit_article_path(@article)%> |
+  <%= link_to "Delete Article", article_path(@article), method: :delete, data: {confirm: "Are you sure?"} %>
+</p>

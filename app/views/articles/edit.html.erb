@@ -2,3 +2,7 @@
 <%= render "articles/errors"%>
 <%= render "articles/form"%>
 
+<p>
+  <%= link_to "Back to All Articles", articles_path %> |
+  <%= link_to "Delete Article", article_path(@article), method: :delete, data: {confirm: "Are you sure?"} %>
+</p>
