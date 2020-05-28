@@ -1,0 +1,22 @@
+.logo-name {
+  font-size: 32px;
+  /* margin: auto; */
+  color: #fff;
+}
+.nav-link {
+  color: #fff !important;
+}
+.btn {
+  margin: 2px;
+  border: 2px solid #fff;
+}
+.btn-purple {
+  background: #9400D3;
+  color: #fff;
+}
+.jumbotron {
+  margin-top: 20px;
+  background-image: asset-url("wow.png");
+  background-size: cover; 
+  min-height: 600px;
+}
