@@ -1,6 +1,15 @@
 @import 'bootstrap/dist/css/bootstrap';
 
+// General
 
+body {
+  background: #ffe259;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffa751, #ffe259);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffa751, #ffe259); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+// Navbar 
 
 .logo-name {
   font-size: 32px;
@@ -14,21 +23,33 @@
   margin: 2px;
   border: 2px solid #fff;
 }
-.btn-purple {
-  background: #9400D3;
-  color: #fff;
+
+.nav-link {
+  background: transparent;
 }
+
+// Footer
+#sticky-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: transparent;
+  text-align: center;
+}
+
+// Home Page
 .jumbotron {
   margin-top: 20px;
   background-image: asset-url("wow.png");
-  background-size: cover; 
+  background-position: center center;
   min-height: 600px;
   border-radius: 10px;
 }
 
-body {
-  background: #ffe259;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #ffa751, #ffe259);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #ffa751, #ffe259); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+.join-button {
+  position: absolute;
+  bottom: 250px;
+  margin:0 auto;
+  background: transparent;
 }
