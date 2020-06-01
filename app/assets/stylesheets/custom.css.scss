@@ -2,26 +2,32 @@
 
 // General
 
-body {
+
+body, .card-body, .card-header, .card-footer, {
   background: #ffe259;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #ffa751, #ffe259);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #ffa751, #ffe259); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 }
 
+.card-index {
+  margin-top : 20px;
+
+  
+}
 // Navbar 
 
 .logo-name {
   font-size: 32px;
   /* margin: auto; */
-  color: #fff;
+  color: #ffab52 !important;
 }
+
 .nav-link {
-  color: #fff !important;
+  color: #ffab52 !important;
 }
 .btn {
   margin: 2px;
-  border: 2px solid #fff;
+  border: 2px solid #ffab52;
 }
 
 .nav-link {
@@ -33,6 +39,7 @@ body {
   html,
     body {
       height: 100%;
+      
     }
 
     #page-content {
@@ -47,6 +54,9 @@ body {
 
     body {
       background: transparent;
+    }
+    .footer-text {
+      color: #343A40;
     }
 }
 
@@ -64,4 +74,53 @@ body {
   bottom: 250px;
   margin:0 auto;
   background: transparent;
+}
+
+.home-text {
+  color: #343A40;
+}
+
+// ARTICLES
+
+.card-shell {
+  background-image: asset-url("wow.png");
+}
+
+.card-header {
+  color: #343A40;
+}
+
+.card-index {
+  border-radius: 10px;
+}
+.card-title-index, .card-text-index, .footer-text-index {
+  color: #343A40;
+}
+.footer-text-index {
+  font-style: italic;
+}
+
+.ind-button {
+  color: #343A40;
+  border: 2px solid #343A40;
+}
+
+// Articles Show Page
+
+.object-color {
+  color: #343A40;
+}
+.show-panel {
+  margin-top: 20px;
+}
+
+.show-card {
+  background: #343A40;
+  h1, p {
+    color: #ffab52 !important;
+  }
+  .show-button {
+    color: #ffab52;
+    border: 2px solid #ffab52;
+  }
 }

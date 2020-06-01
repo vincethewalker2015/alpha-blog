@@ -1,29 +1,33 @@
-<h1>All Articles</h1>
+<h1 class="text-center mt-4">All Articles</h1>
+<div class="card card-shell text-center">
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
 
-  <tbody>
-   <% @articles.each do |article| %>
-    <tr>
-      <td><%= article.title %></td> 
-      <td><%= article.description %></td>
-      <td>
-        <%= link_to "Show", article_path(article) %> |
-        <%= link_to "Edit", edit_article_path(article) %> |
-        <%= link_to "Delete", article_path(article), method: :delete, data: {confirm: "Are you sure?"} %>
-      </td>
-    </tr>
-     <% end %>
-  </tbody>
-</table>
-<p>
+  
+    <% @articles.each do |article| %>
+      <div class="card-index">
+        <div class="row justify-content-center">
+        <div class="col-8">
+        <div class="card-header font-italic"> By: Vincent Walker</div>
+      <div class="card-body">
+        <h4 class="card-title text-bold card-title-index"><%= article.title %></h4>
+        <p class="card-text card-text-index"><%= article.description %></p>
+        <p> 
+          <%= link_to "Show", article_path(article), class: "btn btn btn-outline-* ind-button" %> 
+          <%= link_to "Edit", edit_article_path(article), class: "btn btn btn-outline-* ind-button " %> 
+          <%= link_to "Delete", article_path(article), class: "btn btn btn-outline-* ind-button ", method: :delete, data: {confirm: "Are you sure?"} %>
+        </p>
+      </div>
+        <div class="card-footer text-muted ">
+          <small class="footer-text-index">Created: <%= time_ago_in_words(article.created_at) %> ago.</small>
+          <small class="footer-text-index">Edited: <%= time_ago_in_words(article.updated_at) %> ago.</small>
+        </div>
+      </div>
+      </div>
+      </div>
+      <br /><br /><br />
+    <% end %>
+  
+</div>
   <%= link_to "Create new Article", new_article_path %> |
   <%= link_to "Home Page", root_path %>
 </p>
