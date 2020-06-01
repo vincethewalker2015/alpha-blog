@@ -1,8 +1,6 @@
 <h1 class="text-center mt-4">All Articles</h1>
 <div class="card card-shell text-center">
 
-
-  
     <% @articles.each do |article| %>
       <div class="card-index">
         <div class="row justify-content-center">
@@ -29,11 +27,8 @@
       </div>
       <br /><br /><br />
     <% end %>
-  
 </div>
-  <%= link_to "Create new Article", new_article_path %> |
-  <%= link_to "Home Page", root_path %>
-</p>
+  
 
 
 
