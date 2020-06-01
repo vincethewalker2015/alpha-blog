@@ -11,8 +11,11 @@ body, .card-body, .card-header, .card-footer, {
 
 .card-index {
   margin-top : 20px;
+}
 
-  
+.page-title {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 // Navbar 
 
@@ -28,8 +31,13 @@ body, .card-body, .card-header, .card-footer, {
 .btn {
   margin: 2px;
   border: 2px solid #ffab52;
+  color: #ffab52;
 }
-
+.btn:hover {
+  border: 2px solid #343A40;
+  color: #343A40;
+  background: #ffab52;
+}
 .nav-link {
   background: transparent;
 }
@@ -90,8 +98,9 @@ body, .card-body, .card-header, .card-footer, {
   color: #343A40;
 }
 
-.card-index {
-  border-radius: 10px;
+.card-block {
+  border: 2px solid #343A40;
+  // border-radius: 20px;
 }
 .card-title-index, .card-text-index, .footer-text-index {
   color: #343A40;
@@ -103,6 +112,12 @@ body, .card-body, .card-header, .card-footer, {
 .ind-button {
   color: #343A40;
   border: 2px solid #343A40;
+}
+.ind-button:hover {
+  color: #ffab52;
+  background: #343A40;
+  border: 2px solid #ffab52;
+
 }
 
 // Articles Show Page
@@ -123,4 +138,41 @@ body, .card-body, .card-header, .card-footer, {
     color: #ffab52;
     border: 2px solid #ffab52;
   }
+  .show-button:hover {
+    color: #343A40;
+    border: 2px solid #343A40;
+    background: #ffab52;
+  }
 }
+
+//THE FORMS
+.form-decoration {
+  border: 2px solid #ffab52;
+  background: #343A40;
+  color: #ffab52;
+}
+  
+
+.form-group {
+  margin-right: 15px ;
+  margin-left: 15px ;
+}
+// Place Holder text Styling 
+
+.form-control:focus{
+  background: #343A40;
+}
+
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ffab52 !important;
+    background: #343A40;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #ffab52;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #ffab52;
+  }

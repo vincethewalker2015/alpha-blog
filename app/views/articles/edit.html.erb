@@ -1,8 +1,8 @@
-<h1>Edit Article</h1>
+<h1 class="text-center page-title">Edit Article</h1>
 <%= render "articles/errors"%>
 <%= render "articles/form"%>
 
-<p>
-  <%= link_to "Back to All Articles", articles_path %> |
-  <%= link_to "Delete Article", article_path(@article), method: :delete, data: {confirm: "Are you sure?"} %>
+<p class="text-center mt-2">
+  <%= link_to "Back to All Articles", articles_path, class: "btn btn-outline-* ind-button" %> 
+  <%= link_to "Delete Article", article_path(@article), class: "btn btn-outline-* ind-button", method: :delete, data: {confirm: "Are you sure?"} %>
 </p>

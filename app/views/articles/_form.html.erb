@@ -1,16 +1,23 @@
-<%= form_with(model: @article, local: true)  do |f| %>
+<div class=" row justify-content-center">
+  <div class="col-8">
+    <div class="card show-card text-center">
+  
+      <%= form_with(model: @article, local: true)  do |f| %>
+        <p class="form-group">
+          <%= f.label :title %><br />
+          <%= f.text_field :title, class: "form-control form-decoration", placeholder: "Add Title Here" %>
+        </p>
+        <br />
+        <p class="form-group">
+          <%= f.label :description %><br />
+          <%= f.text_area :description, class: "form-control form-decoration", placeholder: "Add Description Here" %>
+        </p>
 
-<p>
-  <%= f.label :title %><br />
-  <%= f.text_field :title%>
-</p>
-<br />
-<p>
-  <%= f.label :description %><br />
-  <%= f.text_area :description %>
-</p>
+        <p>
+          <%= f.submit class: "btn btn-outline-* show-button" %>
+        </p>
+      <% end %>
+    </div>
+  </div>
 
-<p>
-  <%= f.submit %>
-</p>
-<% end %>
+</div>
