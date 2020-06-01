@@ -157,12 +157,13 @@ body, .card-body, .card-header, .card-footer, {
   margin-right: 15px ;
   margin-left: 15px ;
 }
-// Place Holder text Styling 
+
 
 .form-control:focus{
   background: #343A40;
+  color: #ffab52;
 }
-
+// Place Holder text Styling 
 .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #ffab52 !important;
     background: #343A40;
