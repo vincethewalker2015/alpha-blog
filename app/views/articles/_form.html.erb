@@ -1,15 +1,15 @@
 <div class=" row justify-content-center">
   <div class="col-8">
     <div class="card show-card text-center">
-  
+ 
       <%= form_with(model: @article, local: true)  do |f| %>
         <p class="form-group">
-          <%= f.label :title %><br />
+          <%= f.label :title, class: "form-label float-left" %><br />
           <%= f.text_field :title, class: "form-control form-decoration", placeholder: "Add Title Here" %>
         </p>
         <br />
         <p class="form-group">
-          <%= f.label :description %><br />
+          <%= f.label :description, class:"form-label float-left" %><br />
           <%= f.text_area :description, class: "form-control form-decoration", placeholder: "Add Description Here" %>
         </p>
 
@@ -20,4 +20,4 @@
     </div>
   </div>
 
-</div>
+</div> 

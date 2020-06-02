@@ -140,9 +140,25 @@ body, .card-body, .card-header, .card-footer, {
   }
   .show-button:hover {
     color: #343A40;
-    border: 2px solid #343A40;
-    background: #ffab52;
+    border: 2px solid #343A40;;
   }
+}
+
+
+// FLASH MESSAGES
+
+// General Error Alerts
+.error-msg  {
+    background: #343A40 ;
+    color: #ffab52;
+    .error-title {
+      margin-left: 10px;
+    }
+}
+// Flash Message Alerts
+.flash-error-msg {
+    background: #343A40 ;
+    color: #ffab52;
 }
 
 //THE FORMS
@@ -158,7 +174,11 @@ body, .card-body, .card-header, .card-footer, {
   margin-left: 15px ;
 }
 
-
+.form-label {
+  color: #ffab52;
+  font-size: 18px;
+  font-weight: bold;
+}
 .form-control:focus{
   background: #343A40;
   color: #ffab52;
