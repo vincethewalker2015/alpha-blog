@@ -9,6 +9,12 @@ body, .card-body, .card-header, .card-footer, {
   background: linear-gradient(to right, #ffa751, #ffe259); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+}
+p {
+  font-family: 'Montserrat', sans-serif;
+}
 .card-index {
   margin-top : 20px;
 }
@@ -42,31 +48,6 @@ body, .card-body, .card-header, .card-footer, {
   background: transparent;
 }
 
-// Footer
-#sticky-footer {
-  html,
-    body {
-      height: 100%;
-      
-    }
-
-    #page-content {
-      flex: 1 0 auto;
-    }
-
-    #sticky-footer {
-      flex-shrink: none;
-    }
-
-    /* Other Classes for Page Styling */
-
-    body {
-      background: transparent;
-    }
-    .footer-text {
-      color: #343A40;
-    }
-}
 
 // Home Page
 .jumbotron {
@@ -197,3 +178,34 @@ body, .card-body, .card-header, .card-footer, {
   ::-ms-input-placeholder { /* Microsoft Edge */
     color: #ffab52;
   }
+
+
+
+// Footer
+#sticky-footer {
+  html,
+    body {
+      height: 100%;
+      
+    }
+
+    #page-content {
+      flex: 1 0 auto;
+    }
+
+    #sticky-footer {
+      flex-shrink: none;
+    }
+
+    /* Other Classes for Page Styling */
+
+    body {
+      background: transparent;
+    }
+    .footer-text {
+      color: #343A40;
+    }
+    .footer-logo {
+      color: #343A40;
+    }
+}
