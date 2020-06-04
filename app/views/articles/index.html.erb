@@ -7,7 +7,7 @@
         
         <div class="col-8 ">
         <div class="card-block ">
-        <div class="card-header font-italic"> By: Vincent Walker</div>
+        <div class="card-header font-italic"> By: <%= article.user.username %></div>
       <div class="card-body">
         <h4 class="card-title text-bold card-title-index"><%= article.title %></h4>
         <p class="card-text card-text-index"><%= article.description %></p>
@@ -18,8 +18,8 @@
         </p>
       </div>
         <div class="card-footer text-muted ">
-          <small class="footer-text-index">Created: <%= time_ago_in_words(article.created_at) %> ago.</small>
-          <small class="footer-text-index">Edited: <%= time_ago_in_words(article.updated_at) %> ago.</small>
+          <small class="footer-text-index">Created by: <%= article.user.username %> <%= time_ago_in_words(article.created_at) %> ago.</small>
+          <small class="footer-text-index">Edited by: <%= article.user.username %> <%= time_ago_in_words(article.updated_at) %> ago.</small>
         </div>
       </div>
     </div>  
