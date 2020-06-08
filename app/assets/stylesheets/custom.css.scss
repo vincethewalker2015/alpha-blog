@@ -2,12 +2,15 @@
 
 // General
 
-
+body {
+  margin-top: 20px;
+}
 body, .card-body, .card-header, .card-footer, {
   background: #ffe259;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #ffa751, #ffe259);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #ffa751, #ffe259); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
 
 h1, h2, h3 {
   font-family: 'Poppins', sans-serif;
@@ -132,14 +135,17 @@ p {
 .error-msg  {
     background: #343A40 ;
     color: #ffab52;
+    border-radius: 5px;
     .error-title {
       margin-left: 10px;
     }
 }
 // Flash Message Alerts
 .flash-error-msg {
+    margin-top: 10px;
     background: #343A40 ;
     color: #ffab52;
+    border-radius: 5px;
 }
 
 //THE FORMS

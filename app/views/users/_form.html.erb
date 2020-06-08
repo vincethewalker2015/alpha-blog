@@ -1,0 +1,34 @@
+<div class=" row justify-content-center">
+  <div class="col-8">
+    <div class="card show-card text-center">
+ 
+      <%= form_with(model: @user, local: true)  do |f| %>
+        <p class="form-group">
+          <%= f.label :username, class: "form-label float-left mt-1" %><br />
+          <%= f.text_field :username, class: "form-control form-decoration", placeholder: "Add Your Name here" %>
+        </p>
+        <br />
+        <p class="form-group">
+          <%= f.label :email, class: "form-label float-left" %><br />
+          <%= f.email_field :email, class: "form-control form-decoration", placeholder: "Add Your Email address here" %>
+        </p>
+        <br />
+        <p class="form-group">
+          <%= f.label :password, class: "form-label float-left" %><br />
+          <%= f.password_field :password, class: "form-control form-decoration", placeholder: "Create your Password" %>
+        </p>
+        <br />
+        <p class="form-group">
+          <%= f.label :password_confirmation, class: "form-label float-left" %><br />
+          <%= f.password_field :password_confirmation, class: "form-control form-decoration", placeholder: "Re enter your Password here" %>
+        </p>
+
+        <p>
+          <%= f.submit(@user.new_record? ? "Join up" : "Update Profile", class: "btn btn-outline-* show-button") %>
+          <%= link_to "Home Page" , root_path, class: "btn btn-outline-* show-button" %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+
+</div> 

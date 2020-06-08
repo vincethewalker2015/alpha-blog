@@ -1,0 +1,10 @@
+<% if obj.errors.any? %>
+  <div class="error-msg">
+    <h3 class="error-title">The Following Errors Prevented this Request from Being Saved</h3>
+    <ol>
+      <% obj.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ol>
+  </div>
+<% end %>

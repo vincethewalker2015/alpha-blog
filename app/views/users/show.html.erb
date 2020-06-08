@@ -1,0 +1,12 @@
+<div class="show-panel">
+  <div class="card show-card">
+  <h1 class="text-center mt-4 object-color">Page About: <%= @user.username %></h1>
+    <h4 class="text-center mt-4 object-color"><%= @user.email %></h4>
+    <p class="text-center">
+      <%= link_to "Home Page", root_path, class: "btn btn btn-outline-* show-button" %> 
+      <%= link_to "All Users", users_path, class: "btn btn btn-outline-* show-button" %> 
+      <%= link_to "Edit User", edit_user_path(@user), class: "btn btn btn-outline-* show-button" %> 
+      <%= link_to "Delete User", user_path(@user), class: "btn btn btn-outline-* show-button", method: :delete, data: {confirm: "Are you sure?"} %>
+    </p>
+  </div>
+</div>
