@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   end
 
   def new
-    @user = User.new 
+    @user = User.new
   end
 
   def create
@@ -21,6 +21,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @articles = @user.articles
   end
 
   def edit

@@ -1,7 +1,10 @@
 <div class="show-panel">
   <div class="card show-card">
   <h1 class="text-center mt-4 object-color"><%= @article.title %></h1>
-    <p class="text-center object-color">Created by: <%= @article.user.username if @article.user %></p>
+    <p class="text-center object-color">Created by:
+      <%= @article.user.username if @article.user %>
+    </p>
+     <%= link_to gravatar_for(@article.user), user_path(@article.user) %>
     <p class="text-center mt-4 object-color">Description: <%= @article.description %></p>
     <p class="text-center">
       <%= link_to "Home Page", root_path, class: "btn btn btn-outline-* show-button" %> 
