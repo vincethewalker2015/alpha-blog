@@ -106,8 +106,13 @@ p {
 
 // Articles Show Page
 
+
 .object-color {
   color: #343A40;
+}
+
+.object-color-orange {
+  color: #ffab52;
 }
 .show-panel {
   margin-top: 20px;
@@ -185,7 +190,11 @@ p {
     color: #ffab52;
   }
 
-
+// USERS
+  // Show Page
+  .grav-user img{
+    border: 5px solid #ffab52;
+  }
 
 // Footer
 #sticky-footer {

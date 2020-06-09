@@ -6,15 +6,17 @@
         <div class="row justify-content-center">
         
         <div class="col-8 ">
-        <div class="card-block ">
-        <div class="card-header font-italic"> By: <%= users.username %></div>
+        <div class="card-block">
+        <div class="card-header font-italic text-reset text-decoration-none"> By: <%= link_to users.username, user_path(users) %></div>
       <div class="card-body">
         <h4 class="card-title text-bold card-title-index"><%= users.email %></h4>
-        <p> 
+        <p class="card-text"><%= pluralize(users.articles.count, "article")%></p>
           <%= link_to "Show", user_path(users), class: "btn btn-outline-* ind-button" %> 
           <%= link_to "Edit", edit_user_path(users), class: "btn btn-outline-* ind-button " %> 
           <%= link_to "Delete", user_path(users), class: "btn btn-outline-* ind-button ", method: :delete, data: {confirm: "Are you sure?"} %>
-        </p>
+      </div>
+      <div class="card-footer text-muted">
+        <small class="footer-text-index">Joined <%= time_ago_in_words(users.created_at) %> ago</small>
       </div>
       </div>
     </div>  
