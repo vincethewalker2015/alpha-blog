@@ -4,7 +4,9 @@
         
         <div class="col-8 ">
         <div class="card-block text-center">
-        <div class="card-header font-italic"> By: <%= article.user.username %></div>
+        <% if article.user %>
+          <div class="card-header font-italic"> By: <%= article.user.username %></div>
+        <% end %>
       <div class="card-body">
         <h4 class="card-title text-bold card-title-index"><%= article.title %></h4>
         <p> 
