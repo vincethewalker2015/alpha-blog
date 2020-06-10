@@ -11,8 +11,16 @@
       <%= link_to "Delete User", user_path(@user), class: "btn btn btn-outline-* show-button", method: :delete, data: {confirm: "Are you sure?"} %>
     </div>
      <h3 class="text-center mt-4 object-color-orange">Articles:</h3>
+
+    <div class="digg_pagination m-auto">
+      <%= will_paginate @articles , :container => false%>
+    </div>
+
      <%= render "articles/listing", obj: @user.articles%>
-    
+
+    <div class="digg_pagination m-auto">
+      <%= will_paginate @articles, :container => false %>
+    </div>
   </div>
 </div>
 
