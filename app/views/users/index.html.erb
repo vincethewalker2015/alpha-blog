@@ -1,6 +1,8 @@
-<h1 class="text-center mt-4">All Articles</h1>
+<h1 class="text-center mt-4">Alpha Users</h1>
 <div class="card card-shell text-center">
-
+  <div class="digg_pagination m-auto">
+    <%= will_paginate @users, :container => false %>
+  </div>
     <% @users.each do |users| %>
       <div class="card-index">
         <div class="row justify-content-center">
@@ -24,4 +26,7 @@
       </div>
       <br /><br /><br />
     <% end %>
+    <div class="digg_pagination m-auto">
+      <%= will_paginate @users, :container => false %>
+    </div>
 </div>

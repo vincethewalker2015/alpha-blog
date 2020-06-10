@@ -1,7 +1,15 @@
 <h1 class="text-center mt-4">All Articles</h1>
 <div class="card card-shell text-center">
 
-    <%= render "listing", obj: @articles %>
+<div class="digg_pagination m-auto">
+	<%= will_paginate @articles, :container => false %>
+</div>
+
+	<%= render "listing", obj: @articles %>
+
+<div class="digg_pagination m-auto">
+	<%= will_paginate @articles, :container => false %>
+</div>
 </div>
   
 
