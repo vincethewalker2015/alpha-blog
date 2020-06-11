@@ -37,6 +37,12 @@ p {
 .nav-link {
   color: #ffab52 !important;
 }
+.nav-item {
+  .nav-link-name, a{
+    text-decoration: none !important;
+    color: #ffab52 !important;
+  }
+}
 .btn {
   margin: 2px;
   border: 2px solid #ffab52;

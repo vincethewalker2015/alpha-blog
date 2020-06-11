@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  before_action :require_user, only: [:new, :edit, :update, :destroy]
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -12,7 +13,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
-    @article.user = User.first
+    @article.user = current_user
     if @article.save
       flash.now[:notice] = "Article has been saved"
     redirect_to article_path(@article)

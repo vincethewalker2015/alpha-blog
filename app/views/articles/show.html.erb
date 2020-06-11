@@ -9,8 +9,10 @@
     <p class="text-center">
       <%= link_to "Home Page", root_path, class: "btn btn btn-outline-* show-button" %> 
       <%= link_to "All Articles", articles_path, class: "btn btn btn-outline-* show-button" %> 
-      <%= link_to "Edit Article", edit_article_path(@article), class: "btn btn btn-outline-* show-button" %> 
-      <%= link_to "Delete Article", article_path(@article), class: "btn btn btn-outline-* show-button", method: :delete, data: {confirm: "Are you sure?"} %>
+      <% if logged_in? && @article.user == current_user %>
+        <%= link_to "Edit Article", edit_article_path(@article), class: "btn btn btn-outline-* show-button" %> 
+        <%= link_to "Delete Article", article_path(@article), class: "btn btn btn-outline-* show-button", method: :delete, data: {confirm: "Are you sure?"} %>
+      <% end %>
     </p>
   </div>
 </div>
