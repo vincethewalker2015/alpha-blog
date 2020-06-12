@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
-  before_action :require_user, except: [:new, :create]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-
+  before_action :require_user, except: [:new, :create]
+  before_action :require_same_user, only: [:edit, :update, :destroy]
+  
   def index 
     @users = User.paginate(page: params[:page], per_page: 2)
   end
@@ -54,6 +55,13 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:username, :email, :password, :password_confirmation)
+  end
+
+  def require_same_user
+    if current_user != @user
+      flash[:notice] = "You can only Edit or Delete your own Profile"
+      redirect_to @user
+    end
   end
 
 end
