@@ -15,7 +15,7 @@
         <p class="card-text"><%= pluralize(users.articles.count, "article")%></p>
           <%= link_to "Show", user_path(users), class: "btn btn-outline-* ind-button" %> 
           <%= link_to "Edit", edit_user_path(users), class: "btn btn-outline-* ind-button " %> 
-          <% if logged_in? && current_user.admin? && !user.admin? %>
+          <% if logged_in? && (current_user.admin? && !users.admin?) %>
             <%= link_to "Delete", user_path(users), class: "btn btn-outline-* ind-button ", method: :delete, data: {confirm: "Are you sure?"} %>
           <% end %>
       </div>
