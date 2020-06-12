@@ -15,9 +15,25 @@
                 <li class="nav-item">
                   <%= link_to 'Create Article', new_article_path, class: "btn btn btn-outline-*  " %>
                 </li>
-                <li class="nav-item nav-link-name m-auto">
-                 <%= link_to current_user.username, class: "btn btn-default  "  %>
-              </li>
+                
+                 <!--  <li class="nav-item dropdown nav-link-name m-auto" id="navbarDropdpwn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <%= link_to current_user.username %> 
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdpwn" role="menu" >
+                        <%= link_to "Show User", user_path(current_user), class: "dropdown-item mx-auto" %>
+                        <%= link_to "Edit User", edit_user_path(current_user), class: "dropdown-item mx-auto" %>
+                      </div>
+                  </li> -->
+                <li class="nav-item">
+                  <div class="dropdown">
+                    <button type="button" class="btn btn-outline-*  dropdown-toggle" data-toggle="dropdown">
+                      <%= link_to current_user.username %> 
+                    </button>
+                    <div class="dropdown-menu">
+                      <%= link_to "Show User", user_path(current_user), class: "dropdown-item mx-auto" %>
+                      <%= link_to "Edit User", edit_user_path(current_user), class: "dropdown-item mx-auto" %>
+                    </div>
+                  </div>
+                </li>
               <% end %>
               
           </ul>

@@ -37,12 +37,15 @@ p {
 .nav-link {
   color: #ffab52 !important;
 }
-.nav-item {
-  .nav-link-name, a{
-    text-decoration: none !important;
-    color: #ffab52 !important;
-  }
+.nav-item a{
+  color: #ffab52;
+  text-decoration: none;
 }
+.nav-item a:hover {
+  color: #343A40 !important;
+  text-decoration: none;
+}
+
 .btn {
   margin: 2px;
   border: 2px solid #ffab52;
@@ -50,13 +53,30 @@ p {
 }
 .btn:hover {
   border: 2px solid #343A40;
-  color: #343A40;
+  color: #343A40 !important;
   background: #ffab52;
 }
 .nav-link {
   background: transparent;
 }
 
+ .dropdown-menu {
+  background: #343A40;
+  color: #ffab52;
+  border: 2px solid  #ffab52;
+}
+
+ .dropdown-item:hover {
+  background: #ffab52;
+  color: #343A40 !important;
+}
+
+.dropdown {
+  .button:hover {
+    color: #343A40 !important;
+  }
+  
+}
 
 // Home Page
 .jumbotron {
