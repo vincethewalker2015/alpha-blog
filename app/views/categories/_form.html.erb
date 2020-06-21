@@ -1,0 +1,19 @@
+<div class=" row justify-content-center">
+  <div class="col-8">
+    <div class="card show-card text-center">
+ 
+      <%= form_with(model: @category, local: true)  do |f| %>
+        <p class="form-group">
+          <%= f.label :name, "Category Name", class: "form-label float-left mt-1" %><br />
+          <%= f.text_field :name, class: "form-control form-decoration", placeholder: "Add a Name here" %>
+        </p>
+        <br />
+        <p>
+          <%= f.submit class: "btn btn-outline-* show-button" %>
+          <%= link_to "Home Page" , root_path, class: "btn btn-outline-* show-button" %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+
+</div> 
