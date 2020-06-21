@@ -1,0 +1,6 @@
+TDD $ Test Types??
+
+1 Model
+2 Controler
+3 Validations
+4 Integration

@@ -1,0 +1,34 @@
+<h2 class="text-center page-title">Category Index</h2>
+<div class="card card-shell text-center">
+  <div class="digg_pagination m-auto">
+    <%= will_paginate @categories, :container => false %>
+  </div>
+    <% @categories.each do |cats| %>
+      <div class="card-index">
+        <div class="row justify-content-center">
+        
+        <div class="col-8 ">
+        <div class="card-block">
+        <div class="card-header font-italic text-reset text-decoration-none"> By: <%#= link_to users.username, user_path(users) %></div>
+      <div class="card-body">
+        <h4 class="card-title text-bold card-title-index"><%= link_to cats.name, category_path(cats) %></h4>
+        <!-- <p class="card-text"><%#= pluralize(users.articles.count, "article")%></p> -->
+          <%= link_to "Show", category_path(cats), class: "btn btn-outline-* ind-button" %> 
+          <%= link_to "Edit", edit_category_path(cats), class: "btn btn-outline-* ind-button " %> 
+          <% if logged_in? && current_user.admin? %>
+            <%= link_to "Delete", category_path(cats), class: "btn btn-outline-* ind-button ", method: :delete, data: {confirm: "Are you sure?"} %>
+          <% end %>
+      </div>
+      <div class="card-footer text-muted">
+        <small class="footer-text-index">Joined <%= time_ago_in_words(cats.created_at) %> ago</small>
+      </div>
+      </div>
+    </div>  
+      </div>
+      </div>
+      <br /><br /><br />
+    <% end %>
+    <div class="digg_pagination m-auto">
+      <%= will_paginate @categoriess, :container => false %>
+    </div>
+</div>
