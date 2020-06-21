@@ -7,15 +7,23 @@
               <li class="nav-item">
                 <%= link_to 'What is Alpha', about_path, class: "btn btn btn-outline-* " %>
               </li>
-              
+
               <li class="nav-item">
-                 <%= link_to 'Articles', articles_path, class: "btn btn btn-outline-*  " %>
+                <div class="dropdown">
+                  <button type="button" class="btn btn-outline-*  dropdown-toggle" data-toggle="dropdown">
+                      <%= link_to 'Articles', articles_path, class: "" %> 
+                    </button>
+                      <div class="dropdown-menu">
+                       <%= link_to "Categories", categories_path, class: "dropdown-item mx-auto" %>
+                      <% if logged_in? && current_user.admin?%>
+                        <%= link_to "Create Article", new_article_path, class: "dropdown-item mx-auto" %>
+                        <%= link_to "Create a Category", new_category_path, class: "dropdown-item mx-auto"%>
+                      <% end %>
+                      </div>
+                </div>
               </li>
-              <% if logged_in? %>
-                <li class="nav-item">
-                  <%= link_to 'Create Article', new_article_path, class: "btn btn btn-outline-*  " %>
-                </li>
-                
+              
+                <% if logged_in? %>
                 <li class="nav-item">
                   <div class="dropdown">
                     <button type="button" class="btn btn-outline-*  dropdown-toggle" data-toggle="dropdown">
