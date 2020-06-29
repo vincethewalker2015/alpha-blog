@@ -7,6 +7,7 @@
         <% if article.user %>
           <div class="card-header font-italic"> By: <%= article.user.username %></div>
         <% end %>
+        
       <div class="card-body">
         <h4 class="card-title text-bold card-title-index"><%= article.title %></h4>
           <p> 
@@ -15,6 +16,9 @@
             <%= link_to "Edit", edit_article_path(article), class: "btn btn-outline-* ind-button " %> 
             <%= link_to "Delete", article_path(article), class: "btn btn-outline-* ind-button ", method: :delete, data: {confirm: "Are you sure?"} %>
           <% end %>
+          <% if article.categories.any? %>
+          <p class="text-center object-color"><span class="object-color">Categories: </span><%= render article.categories %></p>
+        <% end %>
         </p>
         
       </div>
