@@ -3,19 +3,23 @@
     <div class="card show-card text-center">
  
       <%= form_with(model: @article, local: true)  do |f| %>
-        <p class="form-group">
+        <div class="form-group row">
           <%= f.label :title, class: "form-label float-left mt-1" %><br />
           <%= f.text_field :title, class: "form-control form-decoration", placeholder: "Add Title Here" %>
-        </p>
+        </div>
         <br />
-        <p class="form-group">
+        <div class="form-group row">
           <%= f.label :description, class:"form-label float-left" %><br />
           <%= f.text_area :description, class: "form-control form-decoration", placeholder: "Add Description Here" %>
-        </p>
-
-        <p>
+        </div>
+        <div class="form-group row">
+          <%= f.label :category, class:"form-label float-left" %>
+          <%= f.collection_select(:category_ids, Category.all, :id, :name,
+          {prompt: "Select a Category below (It can be empty)"}, {multiple: true, class: "custom-select form-decoration"}) %>
+        </div>
+        <div>
           <%= f.submit class: "btn btn-outline-* show-button" %>
-        </p>
+        </div>
       <% end %>
     </div>
   </div>
