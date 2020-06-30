@@ -1,4 +1,23 @@
-<h1>Categories Show Page</h1>
-<%= @category.name %>
+<div class="show-panel">
+  <div class="card show-card">
+    <h1 class="text-center mt-4">Category: <%= @category.name %></h1>
+    <div class="text-center mt-2 mb-1">
+      <% if logged_in? && current_user.admin? %>
+      <%= link_to "Edit Category", edit_category_path(@category), class: "btn btn btn-outline-* show-button" %> 
+      <%= link_to "Delete Category", category_path(@category), class: "btn btn btn-outline-* show-button", method: :delete, data: {confirm: "Are you sure you want to delete this category?"} %>
+      <% end %>
+    </div>
+    </div>
+    <h3 class="text-center mt-4 object-color-orange col-8 offset-2">Articles:</h3>
 
+    <div class="digg_pagination m-auto">
+      <%= will_paginate @articles , :container => false%>
+    </div>
 
+    <%= render "articles/listing", obj: @category.articles%>
+
+    <div class="digg_pagination m-auto">
+      <%= will_paginate @articles, :container => false %>
+    </div>
+  </div>
+</div>

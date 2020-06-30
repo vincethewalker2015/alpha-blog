@@ -1,5 +1,10 @@
 class CategoriesController < ApplicationController
   # before_action :require_admin, except: [:index, :show]
+  before_action :set_category, only: [:show, :edit, :update, :destroy]
+
+  def index 
+    @categories = Category.paginate(page: params[:page], per_page: 4)
+  end
 
   def new
     @category = Category.new
@@ -17,11 +22,28 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @category = Category.find(params[:id])
+    
+    @articles = @category.articles.paginate(page: params[:page], per_page: 2)
   end
 
-  def index 
-    @categories = Category.paginate(page: params[:page], per_page: 4)
+  def edit 
+    
+  end
+
+  def update 
+    
+    if @category.updste(category_params)
+      flash[:notice] = "Category has been Updated"
+      redirect_to category_path(@category)
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy 
+    @category.destroy
+    flash[:notice] = "Category Has been Deleted"
+    redirect_to categories_path
   end
     
   
@@ -29,6 +51,10 @@ class CategoriesController < ApplicationController
 
   def cat_params 
     params.require(:category).permit(:name)
+  end
+
+  def set_category 
+    @category = Category.find(params[:id])
   end
 
   def require_admin
