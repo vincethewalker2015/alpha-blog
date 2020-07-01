@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       flash[:notice] = "Hey #{@user.username}!, You are all set up :)"
-      redirect_to root_path
+      redirect_to user_path(@user)
     else
       flash[:notice] = "There was an Error.. Please try again"
       render 'new'
