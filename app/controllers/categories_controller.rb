@@ -32,7 +32,7 @@ class CategoriesController < ApplicationController
 
   def update 
     
-    if @category.updste(category_params)
+    if @category.update(category_params)
       flash[:notice] = "Category has been Updated"
       redirect_to category_path(@category)
     else
